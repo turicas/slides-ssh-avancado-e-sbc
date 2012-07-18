@@ -31,6 +31,8 @@ SSH
 - `-L` (e `-g` ou `-o GatewayPorts`)
 - `-R` e `GatewayPorts`
 - [ProxyCommand](http://www.undeadly.org/cgi?action=article&sid=20070925181947)
+    - [Mais ProxyCommand](http://www.statusq.org/archives/2008/07/03/1916/)
+    - [ProxyCommand + Bash + FD redirection](http://unix.stackexchange.com/questions/19604/all-about-ssh-proxycommand#19607)
 - Ver: Subsystem, UseDNS
 - Ler man ssh
 - Ler man sshd
