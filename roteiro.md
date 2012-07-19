@@ -6,6 +6,9 @@ SSH
     - Para que serve
     - História
     - Protocolo v2 + OpenSSH, Protocol 2
+    - A palestra é, em sua maior parte, sobre funcionalidades do OpenSSH, não
+      sobre o protocolo
+
 - Autenticação
     - Chaves versus senhas -> PasswordAuthentication no, AuthorizedKeysFile,
       PubKeyAuthentication
