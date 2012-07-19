@@ -20,7 +20,7 @@ SSH
     - PermitTunnel
 - .ssh/config
 - Escape char
-- BatchMode (para rodar scripts)
+- [BatchMode](http://www.thegeekstuff.com/2009/10/how-to-execute-ssh-and-scp-in-batch-mode-only-when-passwordless-login-is-enabled/) (para rodar scripts)
 - SFTP versus scp
 - `-X` -> X11Forwarding yes, X11DisplayOffset
 - [ControlMaster
