@@ -4,7 +4,19 @@ SSH
 - Introdução
     - O que é
     - Para que serve
-    - [História][hist]
+    - [História][hist] (segundo a Wikipedia)
+        - Primeira versão do protocolo criada em 1995 por um pesquisador
+          finlandês com uma implementação gratuita, baseada em software livre
+          (como a GNU libgmp).
+        - O criador fundou uma empresa (SSH Secure Communications) e mais tarde
+          a implementação dele virou proprietária e paga.
+        - [história do OpenSSH] | Alguém pegou a última versão do SSH que podia
+          ser usada livremente, e começou a corrigir bugs (em 1999). Os
+          desenvolvedores do OpenBSD forkaram esse projeto e a versão 2.6 do
+          OpenBSD (lançada em dezembro de 1999) já incluía o OpenSSH.
+        - O protocolo tinha muitos problemas, e em 2006 uma segunda versão foi
+          publicada. Com melhorias de segurança e novas features.
+
     - Protocolo v2 + OpenSSH, Protocol 2
     - A palestra é, em sua maior parte, sobre funcionalidades do OpenSSH, não
       sobre o protocolo
