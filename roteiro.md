@@ -12,6 +12,9 @@ SSH
 - Autenticação
     - Chaves versus senhas -> PasswordAuthentication no, AuthorizedKeysFile,
       PubKeyAuthentication
+        - Breve explicação de como funcionam chaves: uma privada e uma pública.
+          A pública você coloca no servidor (e pode ser divulgada sem
+          problemas) e a privada você protege o máximo possível.
     - Autenticação do root -> PermitRootLogin no
     - PAM
     - AllowUsers
