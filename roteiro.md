@@ -8,6 +8,22 @@ SSH
     - Protocolo v2 + OpenSSH, Protocol 2
     - A palestra é, em sua maior parte, sobre funcionalidades do OpenSSH, não
       sobre o protocolo
+         - Talvez seja interessante falar, para cada feature que mencionarmos,
+           se ela está prevista no protocolo ou se é uma feature do OpenSSH.
+    - Arquitetura do protocolo
+
+        > This open architecture provides considerable flexibility, allowing
+        > SSH to be used for a variety of purposes beyond a secure shell. The
+        > functionality of the transport layer alone is comparable to Transport
+        > Layer Security (TLS); the user authentication layer is highly
+        > extensible with custom authentication methods; and the connection
+        > layer provides the ability to multiplex many secondary sessions into
+        > a single SSH connection, a feature comparable to BEEP and not
+        > available in TLS.
+
+        - Isso significa que dá pra usar partes da estrutura do SSH para outras
+          coisas, como prover autenticação e segurança para outras tarefas.
+
 
 - Autenticação
     - Chaves versus senhas -> PasswordAuthentication no, AuthorizedKeysFile,
