@@ -4,7 +4,7 @@ SSH
 - Introdução
     - O que é
     - Para que serve
-    - História
+    - [História](https://en.wikipedia.org/wiki/Secure_Shell#History_and_development)
     - Protocolo v2 + OpenSSH, Protocol 2
     - A palestra é, em sua maior parte, sobre funcionalidades do OpenSSH, não
       sobre o protocolo
