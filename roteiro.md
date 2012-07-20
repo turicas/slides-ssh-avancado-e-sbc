@@ -17,7 +17,6 @@ SSH
         - O protocolo tinha muitos problemas, e em 2006 uma segunda versão foi
           publicada. Com melhorias de segurança e novas features.
 
-    - Protocolo v2 + OpenSSH, Protocol 2
     - A palestra é, em sua maior parte, sobre funcionalidades do OpenSSH, não
       sobre o protocolo
          - Talvez seja interessante falar, para cada feature que mencionarmos,
@@ -37,34 +36,56 @@ SSH
           coisas, como prover autenticação e segurança para outras tarefas.
 
 
-- Autenticação
-    - Chaves versus senhas -> PasswordAuthentication no, AuthorizedKeysFile,
-      PubKeyAuthentication
-        - Breve explicação de como funcionam chaves: uma privada e uma pública.
-          A pública você coloca no servidor (e pode ser divulgada sem
-          problemas) e a privada você protege o máximo possível.
-    - Autenticação do root -> PermitRootLogin no
-    - PAM
-    - AllowUsers
-    - StrictModes
-- Quebrando proxies
-    - Port -> 443, 80, ListenAddress
-    - httptunnel
-    - `-D` (DynamicForward) -> proxy SOCKS, AllowTcpForwarding, PermitOpen
-    - PermitTunnel
-- .ssh/config
-- Escape char
-- [BatchMode][batch]
-- SFTP versus scp
-- `-X` -> X11Forwarding yes, X11DisplayOffset
-- [ControlMaster][ControlMaster]
-  ControlPath, ControlPersist
+- Configurações
+    - Servidor
+        - Protocolo v2 + OpenSSH, Protocol 2
+        - Autenticação
+            - Chaves versus senhas -> PasswordAuthentication no,
+              AuthorizedKeysFile, PubKeyAuthentication
+                - Breve explicação de como funcionam chaves: uma privada e uma
+                  pública.  A pública você coloca no servidor (e pode ser
+                  divulgada sem problemas) e a privada você protege o máximo
+                  possível.
+            - Autenticação do root -> PermitRootLogin no
+            - PAM
+            - AllowUsers
+            - StrictModes
+
+    - Cliente
+        - .ssh/config
+        - [ControlMaster][ControlMaster]
+          ControlPath, ControlPersist
+
+
+- Usos do OpenSSH
+
+    - Quebrando proxies
+        - Port -> 443, 80, ListenAddress
+        - httptunnel
+        - `-D` (DynamicForward) -> proxy SOCKS, AllowTcpForwarding, PermitOpen
+        - PermitTunnel
+        - `-L` (e `-g` ou `-o GatewayPorts`)
+        - `-R` e `GatewayPorts`
+
+    - [ProxyCommand][ProxyCommand-1]
+        - [ProxyCommand-2]
+        - [ProxyCommand + Bash + FD redirection][ProxyCommand-3]
+
+    - SFTP versus scp
+
+    - `-X` -> X11Forwarding yes, X11DisplayOffset
+
+- Misc
+    - Escape char
+    - [BatchMode][batch]
+
 - [bcvi][bcvi] e [sbc][bcvi]
-- `-L` (e `-g` ou `-o GatewayPorts`)
-- `-R` e `GatewayPorts`
-- [ProxyCommand][ProxyCommand-1]
-    - [ProxyCommand-2]
-    - [ProxyCommand + Bash + FD redirection][ProxyCommand-3]
+
+
+
+TODO:
+-----
+
 - Ver: Subsystem, UseDNS
 - Ler man ssh
 - Ler man sshd
