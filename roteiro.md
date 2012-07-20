@@ -21,16 +21,17 @@ SSH
       sobre o protocolo
          - Talvez seja interessante falar, para cada feature que mencionarmos,
            se ela está prevista no protocolo ou se é uma feature do OpenSSH.
+
     - Arquitetura do protocolo
 
-        > This open architecture provides considerable flexibility, allowing
+        > "This open architecture provides considerable flexibility, allowing
         > SSH to be used for a variety of purposes beyond a secure shell. The
         > functionality of the transport layer alone is comparable to Transport
         > Layer Security (TLS); the user authentication layer is highly
         > extensible with custom authentication methods; and the connection
         > layer provides the ability to multiplex many secondary sessions into
         > a single SSH connection, a feature comparable to BEEP and not
-        > available in TLS.
+        > available in TLS."[1][wikipedia-arquitetura]
 
         - Isso significa que dá pra usar partes da estrutura do SSH para outras
           coisas, como prover autenticação e segurança para outras tarefas.
@@ -93,6 +94,7 @@ TODO:
 
 [hist]: https://en.wikipedia.org/wiki/Secure_Shell#History_and_development
 [batch]: http://www.thegeekstuff.com/2009/10/how-to-execute-ssh-and-scp-in-batch-mode-only-when-passwordless-login-is-enabled/
+[wikipedia-arquitetura]: https://en.wikipedia.org/wiki/Secure_Shell#Architecture
 [ControlMaster]: http://sshmenu.sourceforge.net/articles/transparent-mulithop.html
 [bcvi]: http://sshmenu.sourceforge.net/articles/bcvi/
 [sbc]: https://github.com/turicas/sbc
