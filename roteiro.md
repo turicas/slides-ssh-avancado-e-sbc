@@ -17,11 +17,6 @@ SSH
         - O protocolo tinha muitos problemas, e em 2006 uma segunda versão foi
           publicada. Com melhorias de segurança e novas features.
 
-    - A palestra é, em sua maior parte, sobre funcionalidades do OpenSSH, não
-      sobre o protocolo
-         - Talvez seja interessante falar, para cada feature que mencionarmos,
-           se ela está prevista no protocolo ou se é uma feature do OpenSSH.
-
     - Arquitetura do protocolo
 
         > "This open architecture provides considerable flexibility, allowing
