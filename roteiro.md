@@ -3,7 +3,12 @@ SSH
 
 - Introdução
     - O que é
+        - SSH = Secure Shell # ["Um protocolo para logins remotos seguros e
+          outros serviços de rede seguros em uma rede insegura."][RFC4521]
     - Para que serve
+        - O uso mais comum é acessar um shell em uma outra máquina da rede, mas
+          vamos ver que serve também pra outras coisas.
+
     - [História][hist] (segundo a Wikipedia)
         - Primeira versão do protocolo criada em 1995 por um pesquisador
           finlandês com uma implementação gratuita, baseada em software livre
@@ -19,6 +24,16 @@ SSH
 
     - Arquitetura do protocolo
 
+        - Protocolo de camada de transporte: responsável pela autenticação do
+          servidor, confidencialidade e integridade da comunicação.
+
+        - Protocolo de autenticação: identifica o cliente ao servidor. Roda
+          sobre o protocolo de camada de transporte.
+
+        - Protocolo de conexão: fornece uma gama maior de serviços em cima da
+          camada de transporte, como multiplexação, controle de fluxo, execução
+          remota de programas, __forwarding de conexões__ etc.
+
         > "This open architecture provides considerable flexibility, allowing
         > SSH to be used for a variety of purposes beyond a secure shell. The
         > functionality of the transport layer alone is comparable to Transport
@@ -32,7 +47,7 @@ SSH
           coisas, como prover autenticação e segurança para outras tarefas.
 
 
-- Configurações
+- Configuração
     - Servidor
         - Protocolo v2 + OpenSSH, Protocol 2
         - Autenticação
@@ -55,7 +70,11 @@ SSH
 
 - Usos do OpenSSH
 
-    - Quebrando proxies
+    Acho que pra cada uma dessas possibilidades a gente precisa de uma breve
+    explicação, um cenário em que isso seria útil, e um exemplo de comando (e,
+    em alguns casos, uma demonstração ao vivo).
+
+    - Quebrando proxies/firewalls
         - Port -> 443, 80, ListenAddress
         - httptunnel
         - `-D` (DynamicForward) -> proxy SOCKS, AllowTcpForwarding, PermitOpen
@@ -67,13 +86,12 @@ SSH
         - [ProxyCommand-2]
         - [ProxyCommand + Bash + FD redirection][ProxyCommand-3]
 
-    - SFTP versus scp
-
     - `-X` -> X11Forwarding yes, X11DisplayOffset
 
 - Misc
     - Escape char
     - [BatchMode][batch]
+    - SFTP versus scp
 
 - [bcvi][bcvi] e [sbc][bcvi]
 
@@ -97,3 +115,4 @@ TODO:
 [ProxyCommand-2]: http://www.statusq.org/archives/2008/07/03/1916/
 [ProxyCommand-3]: http://unix.stackexchange.com/questions/19604/all-about-ssh-proxycommand#19607
 [openssh-hist]: http://openssh.com/history.html
+[RFC4521]: https://tools.ietf.org/html/rfc4251
