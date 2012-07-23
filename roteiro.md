@@ -63,8 +63,15 @@ SSH
 
     - Cliente
         - .ssh/config
-        - [ControlMaster][ControlMaster]
-          ControlPath, ControlPersist
+        - [ControlMaster][ControlMaster], ControlPath, ControlPersist
+            - Multiplexação de conexões. Com ControlMaster ativado, uma nova
+              sessão tenta usar a conexão de rede já criada por outra conexão.
+            - ControlPath é o caminho do socket da sessão principal que vai ser
+              usado pelas secundárias.
+            - ControlPersist permite que sessões que reutilizaram uma conexão
+              aberta anteriormente não morra quando a sessão inicial é
+              finalizada.
+
 
 
 - Usos do OpenSSH
