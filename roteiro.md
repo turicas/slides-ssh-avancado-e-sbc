@@ -94,7 +94,14 @@ SSH
           já estejam rodando na máquina. O padrão é 10
 
     - Quebrando proxies/firewalls
-        - `-D` (DynamicForward) -> proxy SOCKS, AllowTcpForwarding, PermitOpen
+
+        - `-D` (DynamicForward) -> proxy SOCKS
+            - Um socket é criado no cliente e ouve em uma porta. Toda vez que
+              uma conexão é feita nessa porta, a conexão é encaminhada para o
+              servidor e aí o protocolo de aplicação segue seu caminho a partir
+              daí.
+            - O servidor SSH vai atuar como um servidor SOCKS (4 ou 5)
+
         - PermitTunnel
         - `-L` (e `-g` ou `-o GatewayPorts`)
         - `-R` e `GatewayPorts`
