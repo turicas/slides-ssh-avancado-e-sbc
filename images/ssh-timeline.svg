@@ -14,7 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="ssh-timeline.svg">
+   sodipodi:docname="ssh-timeline.svg"
+   inkscape:export-filename="/home/amieiro/workspace/palestras/SSH-dicas_e_truques_sensacionais_que_quase_ninguém_conhece/slides/images/ssh-timeline.png"
+   inkscape:export-xdpi="69.29084"
+   inkscape:export-ydpi="69.29084">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,17 +27,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.65314286"
-     inkscape:cx="656.81908"
-     inkscape:cy="372.04724"
+     inkscape:zoom="0.46758481"
+     inkscape:cx="395.12196"
+     inkscape:cy="302.66156"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1067"
      inkscape:window-height="661"
-     inkscape:window-x="166"
-     inkscape:window-y="11"
-     inkscape:window-maximized="0" />
+     inkscape:window-x="28"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -52,20 +57,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-308.2677)">
-    <g
-       id="g3195">
-      <path
-         sodipodi:nodetypes="ccccc"
-         inkscape:connector-curvature="0"
-         id="path2991"
-         d="m 124.14462,654.25798 0,20.10536 297.94556,0 522.12738,0 0,-21.59471"
-         style="fill:none;stroke:#000000;stroke-width:1.04955029px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path2993"
-         d="m 422.83745,674.28155 0,-21.56391"
-         style="fill:none;stroke:#000000;stroke-width:1.05721569px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
     <flowRoot
        xml:space="preserve"
        id="flowRoot3113"
@@ -76,74 +67,103 @@
            height="264.45795"
            x="258.80109"
            y="141.63951" /></flowRegion><flowPara
-         id="flowPara3119"></flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-       x="46.619843"
-       y="639.21234"
-       id="text3146"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3148"
-         x="46.619843"
-         y="639.21234"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium">Versão 1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-       x="353.29745"
-       y="635.21234"
-       id="text3146-1"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         x="353.29745"
-         y="635.21234"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium"
-         id="tspan3189">OpenSSH</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
-       x="864.21466"
-       y="639.21234"
-       id="text3146-5"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3148-4"
-         x="864.21466"
-         y="639.21234"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium">Versão 2</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium"
-       x="94.63784"
-       y="704.31842"
-       id="text3203"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3205"
-         x="94.63784"
-         y="704.31842">1995</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium"
-       x="394.48746"
-       y="704.33844"
-       id="text3207"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3209"
-         x="394.48746"
-         y="704.33844">1999</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium"
-       x="915.32666"
-       y="704.33844"
-       id="text3211"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3213"
-         x="915.32666"
-         y="704.33844">2006</tspan></text>
+         id="flowPara3119" /></flowRoot>    <g
+       id="g3051"
+       inkscape:export-filename="/home/amieiro/workspace/palestras/SSH-dicas_e_truques_sensacionais_que_quase_ninguém_conhece/slides/images/ssh-timeline.png"
+       inkscape:export-xdpi="69.29084"
+       inkscape:export-ydpi="69.29084">
+      <g
+         id="g3195">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.04955029px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 124.14462,654.25798 0,20.10536 297.94556,0 522.12738,0 0,-21.59471"
+           id="path2991"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.05721569px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 422.83745,674.28155 0,-21.56391"
+           id="path2993"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g3033">
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+           x="46.619843"
+           y="639.21234"
+           id="text3146"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3148"
+             x="46.619843"
+             y="639.21234"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium">Versão 1</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:28px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium"
+           x="94.63784"
+           y="704.31842"
+           id="text3203"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3205"
+             x="94.63784"
+             y="704.31842">1995</tspan></text>
+      </g>
+      <g
+         id="g3039">
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+           x="353.29745"
+           y="635.21234"
+           id="text3146-1"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             x="353.29745"
+             y="635.21234"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium"
+             id="tspan3189">OpenSSH</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:28px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium"
+           x="394.48746"
+           y="704.33844"
+           id="text3207"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3209"
+             x="394.48746"
+             y="704.33844">1999</tspan></text>
+      </g>
+      <g
+         id="g3045">
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Courier New;-inkscape-font-specification:Courier New"
+           x="864.21466"
+           y="639.21234"
+           id="text3146-5"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3148-4"
+             x="864.21466"
+             y="639.21234"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium">Versão 2</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:28px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Inconsolata;-inkscape-font-specification:Inconsolata Medium"
+           x="915.32666"
+           y="704.33844"
+           id="text3211"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3213"
+             x="915.32666"
+             y="704.33844">2006</tspan></text>
+      </g>
+    </g>
   </g>
 </svg>
