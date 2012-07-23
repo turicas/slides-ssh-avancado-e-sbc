@@ -103,6 +103,12 @@ SSH
             - O servidor SSH vai atuar como um servidor SOCKS (4 ou 5)
 
         - `-L` (e `-g` ou `-o GatewayPorts`)
+            - Especifica que uma porta no cliente vai ser encaminhada para
+              host:port no lado remoto. Ou seja, se eu abrir a conexão com `ssh
+              meuservidor.com -L 8080:google.com:80` e conectar (no cliente) em
+              localhost:8080, a conexão vai ser encaminhada para o servidor e,
+              de lá, vai ser criada uma conexão em google.com, na porta 80.
+
         - `-R` e `GatewayPorts`
 
     - [ProxyCommand][ProxyCommand-1]
