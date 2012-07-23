@@ -61,6 +61,14 @@ SSH
             - Autenticação do root -> PermitRootLogin no
             - AllowUsers
 
+        - AllowTcpForwarding
+            - Define se TCP Forwarding é permitido ou não. Desabilitar não
+            melhora a segurança se o usuário tiver acesso de shell, já que aí
+            ele pode instalar seus próprios forwarders.
+
+        - PermitOpen
+            - Especifica que forwardings (host:port) podem ser feitos.
+
     - Cliente
         - .ssh/config
         - [ControlMaster][ControlMaster], ControlPath, ControlPersist
