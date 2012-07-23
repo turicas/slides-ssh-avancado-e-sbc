@@ -52,6 +52,12 @@ URL: http://code.google.com/p/html5slides/
     .turiquinhas > img { margin-top: 10px; }
     table { margin-top: 50px !important; }
     td { border: 0 !important; vertical-align: middle !important; }
+    .notransition {
+      transition: none !important;
+      -o-transition: none !important;
+      -moz-transition: none !important;
+      -webkit-transition: none !important;
+    }
   </style>
 
   <body style='display: none'>
@@ -227,10 +233,21 @@ URL: http://code.google.com/p/html5slides/
         [exemplo de comando]
       </article>
 
-      <article>
-        -L
-        [imagem]
-        [exemplo de comando]
+      <article class="notransition">
+        <h1>-L</h1>
+        <ul class="build without-bullets">
+          <li> <img src="images/diagrama-L-1.png" /> </li>
+        </ul>
+      </article>
+
+      <article class="notransition">
+        <h1>-L</h1>
+        <ul>
+          <li><img src="images/diagrama-L-2.png" /></li>
+        </ul>
+        <ul class="build without-bullets">
+          <li><pre>[exemplo de comando]</pre></li>
+        </ul>
       </article>
 
       <article>
