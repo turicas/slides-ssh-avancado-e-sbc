@@ -110,6 +110,12 @@ SSH
               de lá, vai ser criada uma conexão em google.com, na porta 80.
 
         - `-R` e `GatewayPorts`
+            - Mais ou menos o inverso do -L. Uma conexão que chegue à porta
+              especificada no servidor é encaminhada para host:porta no
+              cliente. Isso significa que se eu começar uma sessão com `ssh
+              meuservidor.com -R 8080:google.com:80` e alguém conectar em
+              meuservidor.com:8080, a conexão será encaminhada para o cliente
+              e, a partir de lá será criada uma conexão para google.com:80.
 
     - [ProxyCommand][ProxyCommand-1]
         - [ProxyCommand-2]
