@@ -73,14 +73,17 @@ SSH
               finalizada.
 
 
-
 - Usos do OpenSSH
 
-    Acho que pra cada uma dessas possibilidades a gente precisa de uma breve
-    explicação, um cenário em que isso seria útil, e um exemplo de comando (e,
-    em alguns casos, uma demonstração ao vivo).
+    # Acho que pra cada uma dessas possibilidades a gente precisa de uma breve
+    # explicação, um cenário em que isso seria útil, e um exemplo de comando (e,
+    # em alguns casos, uma demonstração ao vivo).
 
     - `-X` -> X11Forwarding yes, X11DisplayOffset
+        - Para usar o X11 remotamente por cima do SSH.
+        - X11DisplayOffset define o primeiro número de display disponível para
+          forwarding. Isso evita que o sshd interfira com servidores do X11 que
+          já estejam rodando na máquina. O padrão é 10
 
     - Quebrando proxies/firewalls
         - `-D` (DynamicForward) -> proxy SOCKS, AllowTcpForwarding, PermitOpen
