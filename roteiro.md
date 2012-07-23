@@ -102,7 +102,6 @@ SSH
               daí.
             - O servidor SSH vai atuar como um servidor SOCKS (4 ou 5)
 
-        - PermitTunnel
         - `-L` (e `-g` ou `-o GatewayPorts`)
         - `-R` e `GatewayPorts`
 
