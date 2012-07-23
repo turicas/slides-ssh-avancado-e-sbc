@@ -1,6 +1,8 @@
 SSH
 ===
 
+- Apresentação
+
 - Introdução
     - O que é
         - SSH = Secure Shell # ["Um protocolo para logins remotos seguros e
@@ -52,15 +54,12 @@ SSH
         - Protocolo v2 + OpenSSH, Protocol 2
         - Autenticação
             - Chaves versus senhas -> PasswordAuthentication no,
-              AuthorizedKeysFile, PubKeyAuthentication
                 - Breve explicação de como funcionam chaves: uma privada e uma
                   pública.  A pública você coloca no servidor (e pode ser
                   divulgada sem problemas) e a privada você protege o máximo
                   possível.
             - Autenticação do root -> PermitRootLogin no
-            - PAM
             - AllowUsers
-            - StrictModes
 
     - Cliente
         - .ssh/config
@@ -74,9 +73,9 @@ SSH
     explicação, um cenário em que isso seria útil, e um exemplo de comando (e,
     em alguns casos, uma demonstração ao vivo).
 
+    - `-X` -> X11Forwarding yes, X11DisplayOffset
+
     - Quebrando proxies/firewalls
-        - Port -> 443, 80, ListenAddress
-        - httptunnel
         - `-D` (DynamicForward) -> proxy SOCKS, AllowTcpForwarding, PermitOpen
         - PermitTunnel
         - `-L` (e `-g` ou `-o GatewayPorts`)
@@ -85,25 +84,16 @@ SSH
     - [ProxyCommand][ProxyCommand-1]
         - [ProxyCommand-2]
         - [ProxyCommand + Bash + FD redirection][ProxyCommand-3]
+        - httptunnel
 
-    - `-X` -> X11Forwarding yes, X11DisplayOffset
-
-- Misc
-    - Escape char
-    - [BatchMode][batch]
-    - SFTP versus scp
-
-- [bcvi][bcvi] e [sbc][bcvi]
-
+- [sbc][bcvi]
+  - Baseado na idéia do [bcvi][bcvi]
+  - Ferramenta que facilita algumas tarefas comuns em uma sessão remota
+  - Livre
+  - Seguro
+  - Extensível
 
 
-TODO:
------
-
-- Ver: Subsystem, UseDNS
-- Ler man ssh
-- Ler man sshd
-- Ler man ssh\_config a partir de HashKnownHosts
 
 [hist]: https://en.wikipedia.org/wiki/Secure_Shell#History_and_development
 [batch]: http://www.thegeekstuff.com/2009/10/how-to-execute-ssh-and-scp-in-batch-mode-only-when-passwordless-login-is-enabled/
