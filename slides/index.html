@@ -58,6 +58,10 @@ URL: http://code.google.com/p/html5slides/
       -moz-transition: none !important;
       -webkit-transition: none !important;
     }
+    .left {
+      float: left;
+      padding-right: 40px;
+    }
   </style>
 
   <body style='display: none'>
@@ -70,7 +74,7 @@ URL: http://code.google.com/p/html5slides/
         <div class="centered">
           <br>
           <p class="centered huge">
-            <a href="http://blog.justen.eng.br/">
+            <a href="http://turicas.info/">
               <strong>Álvaro Justen</strong> aka <strong>Turicas</strong>
             </a>
           </p>
@@ -88,19 +92,17 @@ URL: http://code.google.com/p/html5slides/
 
       <article class="nobackground">
         <h1>Álvaro Justen, prazer!</h1>
-        <p class="centered big">
-          {<a href="http://twitter.com/turicas">twitter.com</a>,
-          <a href="http://github.com/turicas">github.com</a>,
-          <a href="http://bitbucket.org/turicas">bitbucket.org</a>,
-          <a href="http://youtube.com/turicas">youtube.com</a>
-          }/turicas
+        <p class="centered">
+          {<a href="http://github.com/turicas">github.com</a>,
+          <a href="http://twitter.com/turicas">twitter.com</a>,
+          <a href="http://youtube.com/turicas">youtube.com</a>}/turicas
           <br>
-          <a href="http://blog.justen.eng.br/">blog.justen.eng.br</a>
+          <a href="http://turicas.info/">turicas.info</a>
           <br>
-          <a href="mailto:alvaro@CursoDeArduino.com.br">alvaro@CursoDeArduino.com.br</a>
+          <a href="mailto:alvarojusten@gmail.com">alvarojusten@gmail.com</a>
           <br><br>
           <a href="http://www.CursoDeArduino.com.br"><img src="images/logo_curso-de-arduino.png"
-            width="524" height="196"></a>
+            width="300"></a>
             <br>
           <a href="http://www.CursoDeArduino.com.br">www.CursoDeArduino.com.br</a>
           <br><br>
@@ -135,6 +137,25 @@ URL: http://code.google.com/p/html5slides/
         </ul>
       </article>
 
+    <article class="red-background">
+      <div class="centered middle-without-title">
+        <br><br>
+          <a class="white big"
+            href="http://turicas.info/slides/ssh-avancado-e-sbc"><b>turicas.info/slides/ssh-avancado-e-sbc</b></a>
+        </div>
+    </article>
+
+    <article>
+      <h1>Roteiro</h1>
+      <ul class="build big">
+        <li>Configuração</li>
+        <li>Port-forwarding (<code>-D</code>, <code>-L</code>, <code>-R</code>)</li>
+        <li>Export display</li>
+        <li>Outros (<code>-w</code>, <code>ProxyCommand</code> etc.)</li>
+        <li><a href="https://github.com/turicas/sbc">sbc</a></li>
+      </ul>
+    </article>
+
       <article>
         <h1>O que é?</h1>
         <ul class="build">
@@ -153,17 +174,19 @@ URL: http://code.google.com/p/html5slides/
 
       <article>
         <h1>História</h1>
-        <img src="images/ssh-timeline.png" alt="Timeline do SSH" />
+        <div class="middle-with-text centered">
+          <img src="images/ssh-timeline.png" alt="Timeline do SSH" />
+        </div>
       </article>
 
       <article>
         <h1>O Protocolo</h1>
         <ul class="build huge">
-          <li> RFC452{0..4} </li>
+          <li> RFC<code>452{0..4}</code> </li>
           <li> 3 componentes principais:
             <br>
             <ul class="build">
-              <li> Camada de transporte </li>
+              <li> Transporte </li>
               <li> Autenticação </li>
               <li> Conexão </li>
             </ul>
@@ -185,7 +208,8 @@ URL: http://code.google.com/p/html5slides/
             <ul>
               <li> <pre>PasswordAuthentication no</pre> </li>
               <li> <pre>ssh-keygen -t rsa -b 2048</pre> </li>
-              <li> <pre>ssh-copy-id</pre> (/home/user/.ssh/authorized_keys) </li>
+              <li> <pre>ssh-copy-id</pre>
+              (<code>/home/user/.ssh/authorized_keys</code>) </li>
             </ul>
           </li>
       </article>
@@ -200,8 +224,12 @@ URL: http://code.google.com/p/html5slides/
             </ul>
           </li>
           <li> <code>AllowUsers</code> </li>
-          <li> <code>AllowTcpForwarding</code> </li>
-          <li> <code>PermitOpen</code> </li>
+          <li>
+            <code>AllowTcpForwarding</code>
+            <ul>
+              <li> <code>PermitOpen</code> </li>
+            </ul>
+          </li>
         </ul>
       </article>
 
@@ -223,79 +251,106 @@ URL: http://code.google.com/p/html5slides/
       </article>
 
       <article>
-        <ul class="without-bullets">
-          <li><pre>X11Forwarding yes</pre></li>
-          <li><pre>X11DisplayOffset 10</pre></li>
+        <h1>X Forwarding</h1>
+        <ul class="build">
+          <li>
+            Servidor:
+            <ul class="without-bullets">
+              <li><pre>X11Forwarding yes</pre></li>
+              <li><pre>X11DisplayOffset 10</pre></li>
+            </ul>
+          </li>
+          <li>
+            Cliente:
+            <ul class="without-bullets">
+              <li><pre>ssh -X username@example.com</pre></li>
+            </ul>
+          </li>
         </ul>
       </article>
 
       <!-- Início do -D -->
       <article>
         <h1>-D[0]</h1>
-        <ul class="build without-bullets">
-          <li> <img width="800" src="images/diagrama-D-1.png" /> </li>
-        </ul>
+        <div class="centered middle-with-title">
+          <img width="800" src="images/diagrama-D-1.png" alt="" />
+        </div>
       </article>
 
       <article>
         <h1>-D[1]</h1>
-        <ul class="without-bullets">
-          <li> <img width="800" src="images/diagrama-D-2.png" /> </li>
-        </ul>
+        <div class="centered middle-with-title">
+          <img width="800" src="images/diagrama-D-2.png" alt="" />
+        </div>
       </article>
 
       <article>
         <h1>-D[2]</h1>
-        <ul class="without-bullets">
-          <li> <img width="800" src="images/diagrama-D-3.png" /> </li>
-        </ul>
+        <div class="centered middle-with-title">
+          <img width="800" src="images/diagrama-D-3.png" alt="" />
+        </div>
       </article>
 
       <article>
         <h1>-D[3]</h1>
-        <ul class="without-bullets">
-          <li> <img width="800" src="images/diagrama-D-4.png" /> </li>
-        </ul>
+        <div class="centered middle-with-title">
+          <img width="800" src="images/diagrama-D-4.png" alt="" />
+        </div>
       </article>
 
       <article>
         <h1>-D[4]</h1>
-        <ul class="without-bullets">
-          <li> <img width="800" src="images/diagrama-D-5.png" /> </li>
+        <ul class="without-bullets build">
+          <li>
+            <div class="centered">
+              <img width="800" src="images/diagrama-D-5.png" alt="" />
+            </div>
+          </li>
           <li><pre>ssh -D 9999 usuario@example.com</pre></li>
         </ul>
       </article>
 
       <article>
         <h1>-D[5]</h1>
-        <ul class="without-bullets">
-          <li> <img src="images/firefox_proxy.png" /> </li>
+        <div class="centered">
+          <br>
+          <img src="images/firefox_proxy.png" alt="" />
+        </div>
+      </article>
+
+      <article>
+        <h1>F*ck Yea!</h1>
+        <div class="centered middle-with-title">
+          <img width="800" src="images/diagrama-D-6.png" alt="" />
+        </div>
+      </article>
+
+      <article>
+        <h1>Hmmm...</h1>
+        <ul class="build big">
+          <li>Mas e se o software não suporta proxy?</li>
+          <li>Mas e se ele não suporta proxy SOCKS?</li>
+          <li class="huge"><a href="http://tsocks.sourceforge.net/">tsocks</a>
+            neles!</li>
         </ul>
-      </article>
-
-      <article>
-          <img class="middle-with-title" width="800" src="images/diagrama-D-6.png" />
-      </article>
-
-
-      <article>
-        <p class="middle-with-title big">O software não suporta proxy? Não suporta
-        SOCKS?</p>
-        <p class="big"><a href="http://tsocks.sourceforge.net/">tsocks</a> nele!</p>
       </article>
       <!-- Fim do -D -->
 
       <article>
         <h1>-L[0]</h1>
-        <ul class="build without-bullets">
-          <li> <img width="800px" src="images/diagrama-L-1.png" /> </li>
-        </ul>
+        <div class="centered middle-with-title">
+          <img width="800" src="images/diagrama-L-1.png" alt="" />
+        </div>
       </article>
 
       <article>
         <h1>-L[1]</h1>
         <ul class="without-bullets">
-          <li><img width="800px" src="images/diagrama-L-2.png" /></li>
+          <li>
+            <div class="centered">
+              <img width="800" src="images/diagrama-L-2.png" alt="" />
+            </div>
+          </li>
           <li><ul class="build without-bullets">
             <li><pre>usuario@laptop:~$ ssh -L localhost:1234:host-A.com:80 \
                   usuario@host-B.com</pre></li>
@@ -310,29 +365,43 @@ URL: http://code.google.com/p/html5slides/
 
       <article>
         <h1>-R[0]</h1>
-        <ul class="build without-bullets">
-          <li> <img width="800px" src="images/diagrama-R-1.png" /> </li>
-        </ul>
+        <div class="centered middle-with-title">
+          <img width="800" src="images/diagrama-R-1.png" alt="" />
+        </div>
       </article>
 
       <article>
         <h1>-R[1]</h1>
         <ul class="without-bullets">
-          <li><img width="800px" src="images/diagrama-R-2.png" /></li>
-          <li><pre>usuario@host-A.com:~$ ssh -R localhost:80:host-B.com:8080</pre></li>
-          <li><pre>usuario@laptop:~$ wget host-B.com:8080</pre></li>
+          <li>
+            <div class="centered">
+              <img width="800" src="images/diagrama-R-2.png" alt="" />
+            </div>
+          </li>
+          <li><ul class="build without-bullets">
+            <li><pre>usuario@host-A.com:~$ ssh -R localhost:8080:host-A.com:80 \
+                      username@host-B.com</pre></li>
+            <li><pre>usuario@laptop:~$ wget host-B.com:8080</pre></li>
+          </ul></li>
         </ul>
       </article>
 
       <article class="centered">
           <img class="middle-with-title" height="400" src="images/meme-thumbs-up.png" />
       </article>
+
       <article>
-        <h1>ProxyCommand</h1>
-        <ul class="build without-bullets">
-          <!-- imagem do -R Falar de exemplos como httptunnel -->
-          <li> <img src="images/diagrama-R.png" /> </li>
-          <li><pre>[exemplo de comando]</pre></li>
+        <h1>E mais...</h1>
+        <ul class="build big">
+          <li><code>ProxyCommand</code></li>
+          <li><code>-w local_tun:[remote_tun]</code> (<code>tunX</code>)</li>
+          <li><code>-W host:port</code> ("netcat seguro")</li>
+          <li>Escape characters
+            <ul>
+              <li><code>~.</code> = close connection</li>
+              <li><code>~^Z</code> = suspend connection</li>
+            </ul>
+          </li>
         </ul>
       </article>
 
@@ -340,33 +409,79 @@ URL: http://code.google.com/p/html5slides/
         <h1>sbc</h1>
         <ul class="build huge">
           <li>sbc == Secure Back Channel</li>
-          <li>Ferramenta que facilita algumas tarefas comuns em uma
-          sessão remota.</li>
-          <li>Livre</li>
-          <li>Seguro</li>
-          <li>Extensível</li>
+          <li>Facilita uso de SSH</li>
+          <li><a href="https://github.com/turicas/sbc">github.com/turicas/sbc</a></li>
+          <li>Livre (GPL3)</li>
+          <li>Seguro (SSH)</li>
+          <li>Extensível (plugins)</li>
+          <li>"Clone" do <a href="http://sshmenu.sourceforge.net/articles/bcvi/">bcvi</a></li>
         </ul>
       </article>
+
       <article>
-        <h1>E mais...</h1>
-        <ul class="build">
-            <li>-W (tun)</li>
-            <li>Escape character ('\n + ~ + .' - close connection; '\n + ~ +
-            Ctrl-Z' - suspend connection)</li>
-        </ul>
+        <h1>SSH normal</h1>
+        <div class="centered middle-with-title">
+          <img width="800" src="images/ssh-normal.png" alt="sbc com ssh" />
+        </div>
       </article>
+
       <article>
-        <h1>sbc</h1>
-        <ul class="build">
-          <li><pre>sbc install</pre></li>
-          <li><pre>sbc ssh</pre></li>
-          <li><pre>sbc cp</pre></li>
-          <li><pre>sbc notify</pre></li>
-          <li><pre>sbc gvim</pre></li>
-          <li>E mais qualquer outra funcionalidade que você quiser adicionar
-          através de um plugin.</li>
+        <h1>SSH com sbc</h1>
+        <div class="centered middle-with-title">
+          <img width="800" src="images/ssh-with-sbc.png" alt="sbc com ssh" />
+        </div>
+      </article>
+
+      <article>
+        <h1>sbc hands on</h1>
+        <ul class="build big">
+          <li>Instalação local</li>
+          <li><code>sbc install user@example.com</code></li>
+          <li><code>sbc ssh user@example.com</code></li>
+          <li>
+            Plugins:
+            <ul class="build">
+              <li><code>vim</code></li>
+              <li><code>cp</code></li>
+              <li><code>notify</code></li>
+              <li>Criando plugins</li>
+            </ul>
+          </li>
         </ul>
       </article>
+
+      <article>
+        <a href="http://2012.pythonbrasil.org.br/">
+          <img src="images/pythonbrasil.png" width="800" alt="Python Brasil 2012" />
+        </a>
+      </article>
+
+      <article>
+        <div class="ultra-mega-master-fucking-huge centered">?</div>
+      </article>
+
+      <article>
+        <h1>So long and thanks for all the fish!</h1>
+        <br><br><br><br>
+        <div class="left">
+          <h2>Flávio Amieiro</h2>
+          <ul class="without-bullets">
+              <li><a href="mailto:flavioamieiro@gmail.com">flavioamieiro@gmail.com</a></li>
+              <li><a href="http://flavioamieiro.com/">flavioamieiro.com</a></li>
+              <li><a href="https://twitter.com/flavioamieiro">@flavioamieiro</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Álvaro Justen</h2>
+          <ul class="without-bullets">
+              <li>&nbsp;&nbsp;&nbsp;<a href="mailto:alvarojusten@gmail.com">alvarojusten@gmail.com</a></li>
+              <li>&nbsp;&nbsp;&nbsp;<a href="http://turicas.info/">turicas.info</a></li>
+              <li>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/turicas">@turicas</a></li>
+          </ul>
+        </div>
+      </article>
+
     </section>
   </body>
 </html>
