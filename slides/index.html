@@ -296,7 +296,11 @@ URL: http://code.google.com/p/html5slides/
         <h1>-L[1]</h1>
         <ul class="without-bullets">
           <li><img width="800px" src="images/diagrama-L-2.png" /></li>
-          <li><pre>ssh -L localhost:1234:host-A.com:80 usuario@host-B.com</pre></li>
+          <li><ul class="build without-bullets">
+            <li><pre>usuario@laptop:~$ ssh -L localhost:1234:host-A.com:80 \
+                  usuario@host-B.com</pre></li>
+            <li><pre>usuario@laptop:~$ wget localhost:1234</pre></li>
+            </ul></li>
         </ul>
       </article>
 
